@@ -1,0 +1,30 @@
+class Solution {
+    public String mergeAlternately(String word1, String word2) {
+
+        String result = "";
+
+        int i = 0, j = 0;
+
+        // Merge characters alternately
+        while (i < word1.length() && j < word2.length()) {
+            result += word1.charAt(i);
+            result += word2.charAt(j);
+
+            i++;
+            j++;
+        }
+
+        // Add remaining characters from word1
+        while (i < word1.length()) {
+            result += word1.charAt(i);
+            i++;
+        }
+
+        while (j < word2.length()) {
+            result += word2.charAt(j);
+            j++;
+        }
+
+        return result;
+    }
+}
