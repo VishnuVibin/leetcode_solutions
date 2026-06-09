@@ -1,10 +1,4 @@
-class Solution(object):
-    def maxTotalValue(self, nums, k):
-        """
-        :type nums: List[int]
-        :type k: int
-        :rtype: int
-        """
-        res=max(nums)-min(nums)
-        return res*k
+class Solution:
+    def maxTotalValue(self, nums: List[int], k: int) -> int:
+        return (max(nums)-min(nums))*k
         
