@@ -9,12 +9,7 @@ class Solution(object):
             if(i.isalnum()):
                 str0+=i.lower()
         res=True
-        left=0
-        right=len(str0)-1
-        while(left<right):
-            if(str0[left]!=str0[right]):
-                res=False
-            left+=1
-            right-=1
+        if(str0!=str0[::-1]):
+            res=False
         return res
-                
+        
