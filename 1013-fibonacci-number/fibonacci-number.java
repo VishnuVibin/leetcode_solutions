@@ -1,12 +1,18 @@
 class Solution {
     public int fib(int n) {
-        int val1=1;
-        int val2=0;
-        for(int i=1;i<=n;i++){
-            int curr=val1+val2;
-            val1=val2;
-            val2=curr;
+        if(n==0){
+            return 0;
         }
-        return val2;
+        if(n==1){
+            return 1;
+        }
+        else{
+        int[] dp=new int[n+1];
+        dp[0]=0;
+        dp[1]=1;
+        for(int i=2;i<=n;i++){
+            dp[i]=dp[i-2]+dp[i-1];
+        }
+        return dp[n];}
     }
 }
